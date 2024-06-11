@@ -9,10 +9,9 @@ const recipeSchema = new mongoose.Schema({
         ref: 'Profile',
         required: true,
     },
-    ingredients: [{
-        type: [mongoose.Schema.Types.ObjectId],
-        ref: 'Ingredients',
-    }]
+    ingredients: {type: String,
+        ref: 'Ingredient',
+    }
 });
 
 const Recipe = mongoose.model('Recipe', recipeSchema);

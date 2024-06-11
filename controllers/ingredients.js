@@ -1,10 +1,10 @@
 // controllers/recipes.js
 
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
-const User = require('../models/user.js');
-const Ingredients = require('../models/ingredients.js');
+const User = require("../models/user.js");
+const Ingredient = require("../models/ingredient.js");
 
 // router logic will go here - will be built later on in the lab
 
