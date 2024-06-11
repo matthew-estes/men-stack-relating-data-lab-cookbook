@@ -1,22 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= recipe.name %></title>
-</head>
-<body>
-  <%- include('../partials/_navbar.ejs') %>
-  <h1><%= recipe.name %></h1>
-  <h2>Ingredients: <%= recipe.ingredients%></h2>
-  <ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= recipe.name %></title>
+    <style>
+      body {
+        background-color: whitesmoke;
+      }
 
-  </ul>
-  <h2>Instructions:</h2>
-  <p><%= recipe.instructions %></p>
-  <a href='/recipes/<%= recipe._id %>/edit'>Edit <%= recipe.name%></a>
-  <form action='/recipes/<%= recipe._id %>?_method=DELETE' method='POST'>
-    <button type='submit'>Delete This Recipe</button>
-  </form>
-</body>
+      div {
+        margin-top: 50px;
+      }
+
+      button {
+        max-width: 25%;
+        margin-top: 40px;
+        padding: 10px;
+        background-color: #0077cc;
+        border: none;
+        border-radius: 5px;
+        color: whitesmoke;
+        font-size: 15px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1><%= recipe.name %></h1>
+    <h2>Ingredients:</h2>
+    <p><%= recipe.ingredients%></p>
+    <ul></ul>
+    <h2>Instructions:</h2>
+    <p><%= recipe.instructions %></p>
+    <div>
+      <a href="/recipes/<%= recipe._id %>/edit">Edit <%= recipe.name%></a>
+    </div>
+    <form action="/recipes/<%= recipe._id %>?_method=DELETE" method="POST">
+      <button type="submit">Delete This Recipe</button>
+    </form>
+  </body>
 </html>

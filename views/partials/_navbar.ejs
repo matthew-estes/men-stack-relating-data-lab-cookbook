@@ -1,12 +1,11 @@
+
 <nav>
-    <ul>
-        <li><a href="/">Home</a></li>
-        <% if (user) { %>
-            <li><a href='/recipes'>View my Recipes</a></li>
-            <li><a href='/auth/sign-out'>Sign Out</a></li>
-            <% } else { %>
-            <li><a href='/auth/sign-in'>Sign In</a></li>
-            <li><a href='/auth/sign-up'>Sign Up</a></li>
-            <% } %> 
-    </ul>
+  <a href="/">Home</a>
+  <% if (user) { %>
+  <a href="/recipes">View My Recipes</a>
+  <a href="/auth/sign-out">Sign Out</a>
+  <% } else { %>
+  <a href="/auth/sign-in">Sign In</a>
+  <a href="/auth/sign-up">Sign Up</a>
+  <% } %>
 </nav>

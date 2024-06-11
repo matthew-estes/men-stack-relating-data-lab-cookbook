@@ -48,7 +48,7 @@ router.put('/:recipeId', async (req, res) => {
 		const currentRecipe = await Recipe.findById(req.params.recipeId);
 		currentRecipe.set(req.body);
 		await currentRecipe.save();
-		res.redirect('/');
+		res.redirect('/recipes');
 	} catch (err) {
 		console.log(err);
 		res.redirect('/');

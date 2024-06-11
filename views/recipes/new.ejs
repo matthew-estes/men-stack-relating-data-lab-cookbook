@@ -4,19 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Recipe</title>
+    <style>
+      body {
+        background-color: whitesmoke;
+      }
+      nav {
+        margin-bottom: 20px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      label {
+        margin: 5px 0 5px 0;
+        font-weight: bold;
+      }
+      input,
+      textarea {
+        max-width: 50%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      button {
+        max-width: 15%;
+        margin-top: 35px;
+        padding: 10px;
+        background-color: #0077cc;
+        border: none;
+        border-radius: 5px;
+        color: whitesmoke;
+        font-size: 15px;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <form action='/recipes/create' method='POST'>
-        <label for='name'>Name:</label>
-        <input type='text' name='name' required />
-       
-        <label for='instructions'>Instructions:</label>
-        <textarea name='instructions'></textarea>
-     
-        <label for='ingredients'>Ingredients:</label>
-        <input type='' name='ingredients' />
-    
-        <button type='submit'>Create Recipe</button>
+    <form action="/recipes/create" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" name="name" required />
+      <label for="instructions">Instructions:</label>
+      <textarea name="instructions"></textarea>
+      <label for="ingredients">Ingredients:</label>
+      <input type="" name="ingredients" />
+      <button type="submit">Create Recipe</button>
+    </form>
   </body>
 </html>
