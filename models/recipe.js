@@ -6,10 +6,12 @@ const recipeSchema = new mongoose.Schema({
     instructions: String,
     owner: {
         type: mongoose.Schema.Types.ObjectId,
+        ref: 'Profile',
         required: true,
     },
     ingredients: [{
         type: [mongoose.Schema.Types.ObjectId],
+        ref: 'Ingredients',
     }]
 });
 
